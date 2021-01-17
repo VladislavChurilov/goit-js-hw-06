@@ -1,7 +1,10 @@
 
 import users from './users.js';
-const getUsersWithGender = (users, gender) => users.filter(function(user) {
+const getUsersWithGender = (users, gender) => users.filter(function(user) {   
    return user.gender === gender; 
+  })
+  .map(function(user) {
+   return user.name;
   });
   
   console.log(getUsersWithGender(users, 'male')); 

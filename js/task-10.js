@@ -3,8 +3,8 @@ const getSortedUniqueSkills = users => users.reduce(function(allSkills, user) {
  allSkills.push(...user.skills)
   return allSkills ;
 }, [])
-.filter(function(allSkills,index,skillsArray ){ 
-  return skillsArray.indexOf(allSkills) === index;
+.filter(function(skills,index,skillsArray ){ 
+  return skillsArray.indexOf(skills) === index;
 })
 .sort();
   console.log(getSortedUniqueSkills(users));
